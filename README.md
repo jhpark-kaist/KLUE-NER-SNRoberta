@@ -72,9 +72,9 @@ chmod +x eval.sh
 
 # Contact
 
-Name : Joonhyeong Park
-E-mail : jhpark.kaist@gmail.com
-Affiliation : Statistical Inference and Machine Learning Lab @ KAIST
+Name : Joonhyeong Park <br/>
+E-mail : jhpark.kaist@gmail.com <br/>
+Affiliation : Statistical Inference and Machine Learning Lab @ KAIST <br/>
 
 
 
