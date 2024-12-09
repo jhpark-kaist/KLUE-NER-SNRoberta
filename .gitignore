@@ -1,0 +1,10 @@
+nohup_logs/
+saved/
+src-deprecated/
+*.py
+*.ipynb
+*.sh
+*.out
+*.log
+*.txt
+*.gz
