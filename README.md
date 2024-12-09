@@ -12,7 +12,6 @@ This project implements Named Entity Recognition for the KLUE (Korean Language U
 ├── run_parallel_experiments-epochs=10_SWA_ensemble.sh
 ├── eval.sh
 ├── src/
-│   ├── __init__.py
 │   ├── datasets.py
 │   └── utils.py
 └── data/
@@ -49,35 +48,37 @@ chmod +x eval.sh
 
 ## Results
 
-### Model Performance Across Seeds
 
-| Seed | Model                                                                  | Entity F1  | Char F1    | Status |
-|------|------------------------------------------------------------------------|------------|------------|---------|
-| 1    | roberta-base_seed=1_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa   | 89.33      | 93.81      | OK      |
-| 1    | roberta-large_seed=1_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa  | 88.70      | 93.71      | OK      |
-| 1    | **ENSEMBLE**                                                           | **89.34**  | **93.91**  | **OK**  |
-| 2    | roberta-base_seed=2_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa   | 89.04      | 93.58      | OK      |
-| 2    | roberta-large_seed=2_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa  | 89.68      | 94.01      | OK      |
-| 2    | **ENSEMBLE**                                                           | **89.80**  | **94.06**  | **OK**  |
-| 3    | roberta-base_seed=3_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa   | 88.79      | 93.64      | OK      |
-| 3    | roberta-large_seed=3_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa  | 89.19      | 93.58      | OK      |
-| 3    | **ENSEMBLE**                                                           | **89.41**  | **93.95**  | **OK**  |
-| 4    | roberta-base_seed=4_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa   | 89.28      | 93.71      | OK      |
-| 4    | roberta-large_seed=4_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa  | 89.05      | 93.61      | OK      |
-| 4    | **ENSEMBLE**                                                           | **89.55**  | **93.93**  | **OK**  |
-| 5    | roberta-base_seed=5_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa   | 88.91      | 93.62      | OK      |
-| 5    | roberta-large_seed=5_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa  | 89.47      | 93.88      | OK      |
-| 5    | **ENSEMBLE**                                                           | **89.79**  | **94.10**  | **OK**  |
-| 6    | roberta-base_seed=6_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa   | 88.63      | 93.75      | OK      |
-| 6    | roberta-large_seed=6_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa  | 88.98      | 93.86      | OK      |
-| 6    | **ENSEMBLE**                                                           | **89.23**  | **94.02**  | **OK**  |
-| 7    | roberta-base_seed=7_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa   | 89.09      | 93.78      | OK      |
-| 7    | roberta-large_seed=7_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa  | 89.05      | 93.83      | OK      |
-| 7    | **ENSEMBLE**                                                           | **89.53**  | **94.03**  | **OK**  |
-| 8    | roberta-base_seed=8_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa   | 88.77      | 93.72      | OK      |
-| 8    | roberta-large_seed=8_lr=5e-05_batch=32_outweight=1.0_freeze=False_swa  | 89.46      | 93.86      | OK      |
-| 8    | **ENSEMBLE**                                                           | **89.43**  | **94.03**  | **OK**  |
+### Ensemble Performance Across Seeds
 
-### Average Ensemble Performance
-**Entity F1: 89.51 ± 0.19**  
-**Char F1: 94.00 ± 0.06**
+| Seed | Entity F1  | Char F1    |
+|------|------------|------------|
+| 1    | 89.34      | 93.91      |
+| 2    | 89.80      | 94.06      |
+| 3    | 89.41      | 93.95      |
+| 4    | 89.55      | 93.93      |
+| 5    | 89.79      | 94.10      |
+| 6    | 89.23      | 94.02      |
+| 7    | 89.53      | 94.03      |
+| 8    | 89.43      | 94.03      |
+
+### Average Performance Metrics
+
+| Metric    | Score ± Variance |
+|-----------|-----------------|
+| Entity F1 | 89.51 ± 0.19    |
+| Char F1   | 94.00 ± 0.06    |
+
+
+# Contact
+
+Name : Joonhyeong Park
+E-mail : jhpark.kaist@gmail.com
+Affiliation : Statistical Inference and Machine Learning Lab @ KAIST
+
+
+
+
+
+
+
